@@ -25,11 +25,11 @@
 	<button type="submit" class=hummsubmit style="display:none;"></button>
 </form>
 <script>
-	(function($){
-		$(document).on('ready', function(){
-			$('form.hummsubmit_form').submit();
+	jQuery(function(){
+		jQuery(document).on('ready', function(){
+			jQuery('form.hummsubmit_form').submit();
 		});
-	})(window.jQuery);
+	});
 </script>
 
 
