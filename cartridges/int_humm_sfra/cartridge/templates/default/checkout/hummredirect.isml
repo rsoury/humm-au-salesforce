@@ -10,7 +10,7 @@
 <div class="redirect-text">
 	<p>${Resource.msg('redirect.notification.humm','humm',null)}</p><p class="notify-message">${Resource.msg('redirect.message','humm',null)}</p>
 </div>
-<form method="post" action="${gatewayURL}">
+<form method="post" action="${gatewayURL}" class="hummsubmit_form">
 	<input type="hidden" name="x_account_id" value="${merchantID}" />
 	<input type="hidden" name="x_amount" value="${pdict.orderObject.getTotalGrossPrice().toNumberString()}" />
 	<input type="hidden" name="x_currency" value="${pdict.orderObject.getCurrencyCode()}" />
@@ -25,9 +25,11 @@
 	<button type="submit" class=hummsubmit style="display:none;"></button>
 </form>
 <script>
-	jQuery(function(){
-		jQuery('.hummsubmit').click();
-	});
+	(function($){
+		$(function(){
+			$('form.hummsubmit_form').submit();
+		});
+	})(window.jQuery)
 </script>
 
 
