@@ -26,9 +26,7 @@
 </form>
 <script>
 	(function($){
-		$(function(){
-			$('form.hummsubmit_form').submit();
-		});
+		$('form.hummsubmit_form').submit();
 	})(window.jQuery)
 </script>
 
