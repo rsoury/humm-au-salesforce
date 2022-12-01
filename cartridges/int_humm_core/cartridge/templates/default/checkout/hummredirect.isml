@@ -31,8 +31,10 @@
 </form>
 <script>
 	(function($){
-		$('form.hummsubmit_form').submit();
-	})(window.jQuery)
+		$(document).on('ready', function(){
+			$('form.hummsubmit_form').submit();
+		});
+	})(window.jQuery);
 </script>
 
 
